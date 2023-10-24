@@ -19,7 +19,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     </StyledOptyonsDiv>
   );
 };
-
 FeedbackOptions.propTypes = {
   options: propTypes.array.isRequired,
   onLeaveFeedback: propTypes.func.isRequired,
