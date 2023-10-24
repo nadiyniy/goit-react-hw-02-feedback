@@ -1,4 +1,5 @@
 import { StyledTitleDiv } from './Section.style';
+import propTypes from 'prop-types';
 
 export const Section = ({ title, children }) => {
   return (
@@ -7,4 +8,9 @@ export const Section = ({ title, children }) => {
       {children}
     </StyledTitleDiv>
   );
+};
+
+Section.propTypes = {
+  title: propTypes.string.isRequired,
+  children: propTypes.node.isRequired,
 };

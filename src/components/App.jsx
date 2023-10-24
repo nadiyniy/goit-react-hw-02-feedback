@@ -27,12 +27,12 @@ class App extends React.Component {
     if (total === 0) {
       return 0;
     }
-    return ((this.state.good / total) * 100).toFixed(2);
+    return Number(((this.state.good / total) * 100).toFixed(2));
   };
 
   render() {
     const total = this.countTotalFeedback();
-    console.log(total);
+    const optionsKey = Object.keys(this.state);
     return (
       <div
         style={{
@@ -49,7 +49,7 @@ class App extends React.Component {
       >
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            options={optionsKey}
             onLeaveFeedback={this.feedbackIncrement}
           />
         </Section>

@@ -1,4 +1,5 @@
 import { StyledStatisticsDiv } from './Statystics.style';
+import propTypes from 'prop-types';
 
 export const Statistics = ({
   good,
@@ -16,4 +17,12 @@ export const Statistics = ({
       <p>Positive feedback: {positivePercentage}%</p>
     </StyledStatisticsDiv>
   );
+};
+
+Statistics.propTypes = {
+  good: propTypes.number.isRequired,
+  neutral: propTypes.number.isRequired,
+  bad: propTypes.number.isRequired,
+  total: propTypes.number.isRequired,
+  positivePercentage: propTypes.number.isRequired,
 };
